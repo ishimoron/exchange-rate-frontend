@@ -1,0 +1,7 @@
+<app-currency-history-chart
+  [currencies]="currencies()"
+  [chartConfig]="chartConfig()"
+  (onCurrencySelect)="onSelectedCurrencyChange($event)"
+/>
+
+<app-currency-calculator [selectedCurrencyData]="selectedCurrency()" />

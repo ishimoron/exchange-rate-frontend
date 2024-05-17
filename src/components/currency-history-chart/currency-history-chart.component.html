@@ -1,0 +1,25 @@
+<div class="dropdown">
+  <p-dropdown
+    [options]="currencies"
+    [filter]="true"
+    [showClear]="true"
+    [(ngModel)]="selectedCurrency"
+    (ngModelChange)="onCurrencySelect.emit(selectedCurrency)"
+    optionLabel="currency"
+    filterBy="currency"
+    placeholder="Select a currency"
+    class="dropdown"
+  >
+    <ng-template pTemplate="selectedItem" let-selectedOption>
+      <div>{{ selectedOption.currency }}</div>
+    </ng-template>
+  </p-dropdown>
+</div>
+
+<p-chart
+  [data]="chartConfig"
+  [options]="chartOptions"
+  [responsive]="true"
+  type="line"
+  height="500"
+/>

@@ -1,0 +1,38 @@
+<div class="container">
+  <form [formGroup]="currencyForm">
+    <div class="form-wrapper">
+      <div class="formElement">
+        <p-inputNumber
+          id="amountEUR"
+          type="number"
+          mode="currency"
+          currency="EUR"
+          [formControlName]="formKeys.BASE_CURRENCY"
+        />
+      </div>
+      <div class="arrows">
+        <span class="arrow-icon pi pi-arrow-up"></span>
+        <span class="arrow-icon pi pi-arrow-down"></span>
+      </div>
+      <div class="formElement">
+        <!-- explain to reviewer why it is needed: before user choose the currency in the dropdown 
+          selectedCurrencyData is empty in this way show input without currency mode.
+        -->
+        <p-inputNumber
+          *ngIf="selectedCurrencyData"
+          id="amountCurrency"
+          type="number"
+          mode="currency"
+          [currency]="selectedCurrencyData.currency"
+          [formControlName]="formKeys.SELECTED_CURRENCY"
+        />
+        <p-inputNumber
+          *ngIf="!selectedCurrencyData"
+          id="amountCurrency"
+          type="number"
+          [formControlName]="formKeys.SELECTED_CURRENCY"
+        />
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,8 @@
+:host ::ng-deep .p-dropdown {
+  width: 14rem;
+}
+
+.dropdown {
+  margin: 20px 0;
+  text-align: center;
+}
