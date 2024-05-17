@@ -1,4 +1,5 @@
 ### Please firstly run backend then frontend
+https://github.com/ishimoron/exchange-rate-backend
 
 1. `git clone https://github.com/ishimoron/exchange-rate-frontend.git`  
 2. `npm install`  
